@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environment
+venv/
+.env
+
+# Logs
+*.log
+
+# IDEs
+.vscode/
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Distribuciones y compilaciones
+*.egg
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Dependencias
+Pipfile.lock
+poetry.lock
+
+# Otros archivos
+*.pid
