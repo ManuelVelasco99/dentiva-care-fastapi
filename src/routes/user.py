@@ -5,6 +5,7 @@ from src.auth.jwt import create_access_token
 from src.db import user_collection
 from bson import ObjectId
 from pymongo.errors import DuplicateKeyError
+from typing import List
 
 router = APIRouter()
 
@@ -30,3 +31,8 @@ async def login_user(username: str, password: str):
     
     access_token = create_access_token(data={"sub": username})
     return {"access_token": access_token, "token_type": "bearer"}
+
+@router.get("/", response_model=List[UserSchema])
+async def get_all_users():
+    users = await user_collection.find().to_list(length=None)
+    return users
